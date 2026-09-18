@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#title-area {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#title {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+section {
+    display: none;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+body:not(:has(:target)) #register,
+section:target {
+    display: block;
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 8px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: #3182ce;
+}
+
+label label {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#charCounter-area {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #a0aec0;
+    margin-top: 4px;
+}
+
+a {
+    color: #3182ce;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+    transition: color 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2b6cb0;
+}
+
+button {
+    background-color: #3182ce;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #2b6cb0;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+p[id$="Record"] {
+    font-size: 0.85rem;
+    margin: 10px 0;
+    color: #e53e3e;
+}
