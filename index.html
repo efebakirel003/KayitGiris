@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/style.css"/>
+    <title>Kayıt & Giriş</title>
+</head>
+<body>
+    <div id="title-area"><h1 id="title">Kayıt & Giriş</h1></div>
+    <section id="register">
+        <h2>Kayıt</h2>
+        <label>
+            Kullanıcı adınızı girin...
+            <br><input id="regUsernameInput" type="text" placeholder="Kullanıcı adınız" maxlength="30">
+        </label>
+        <label>
+            Şifrenizi girin...
+            <br><input id="regPasswordInput" type="password" placeholder="Şifreniz" maxlength="20"><br>
+            <label>
+                Şifreyi Göster
+                <input id="regShowPasswordInput" type="checkbox">
+            </label>
+        </label>
+        <label>
+            Tekrar şifrenizi girin...
+            <br><input id="regPasswordAgainInput" type="password" placeholder="Şifreniz" maxlength="20"><br>
+            <label>
+                Şifreyi Göster
+                <input id="regShowPasswordAgainInput" type="checkbox">
+            </label>
+        </label>
+        <p id="regRecord"></p>
+        <a href="#login">Zaten hesabın var mı?</a><br><br>
+        <button id="regSubmitBtn">Onayla</button>
+    </section>
+    <section id="login">
+        <h2>Giriş</h2>
+        <label>
+            Kullanıcı adınızı girin...
+            <br><input id="logUsernameInput" type="text" placeholder="Kullanıcı adınız" maxlength="30">
+        </label><br><br>
+        <label>
+            Şifrenizi girin...
+            <br><input id="logPasswordInput" type="password" placeholder="Şifreniz" maxlength="20"><br>
+            <label>
+                Şifreyi Göster
+                <input id="logShowPasswordInput" type="checkbox">
+            </label>
+        </label><br>
+        <p id="logRecord"></p>
+        <a href="#register">Burda yeni misin?</a><br><br>
+        <button id="logSubmitBtn">Onayla</button>
+    </section>
+    <section id="commentMenu">
+        <h2 id="hiUserTitle">Selam, Kullanıcı!</h2>
+        <p id="comInfo">Senden bana yorumunu alabilir miyim?</p>
+        <textarea id="commentArea" maxlength="200"></textarea>
+        <div id="charCounter-area"><p id="charCounter">0 / 200</p></div>
+        <p id="comRecord"></p>
+        <button id="sendCommentBtn">Onayla</button>
+    </section>
+    <script type="module" src="scripts/script.js"></script>
+</body>
+</html>
